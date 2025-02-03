@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#84D4DD"
+    tools:context=".fragments.ResultFragment">
+
+    <Button
+        android:id="@+id/buttonPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="PLAY AGAIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textTimeUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotomono_semibold"
+        android:text="TIME IS UP!"
+        android:textColor="#FF0000"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your score is:"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textFinalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:text="TextView"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textCongrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Congratulations! New Record!"
+        android:textColor="#211A87"
+        android:textSize="28sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/textTimeUp"
+        app:layout_constraintStart_toStartOf="@+id/textTimeUp"
+        app:layout_constraintTop_toBottomOf="@+id/textTimeUp"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textPrevBestScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Previous Record: "
+        android:textColor="#423A3A"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textCongrats"
+        app:layout_constraintStart_toStartOf="@+id/textCongrats"
+        app:layout_constraintTop_toBottomOf="@+id/textCongrats" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,5 @@ class MainActivity : AppCompatActivity() {
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.light_blue)
         window.navigationBarColor = ContextCompat.getColor(this, R.color.light_blue)
-
     }
 }
